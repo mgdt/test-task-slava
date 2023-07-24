@@ -34,7 +34,7 @@ function handleButtonClick() {
       <ul class="features__list">
         <FeaturesItem
           v-for="(feature, index) in featuresStore.featuresSorted"
-          :key="index"
+          :key="`${feature.sorting}`"
           :image-url="`${feature.image}`"
           :image-alt="feature.image_alt"
           :description="feature.description.replaceAll('\n', '<br>')"
